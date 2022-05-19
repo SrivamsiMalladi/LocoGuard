@@ -1,0 +1,2 @@
+rootProject.name='LocoGuard'
+include ':app'

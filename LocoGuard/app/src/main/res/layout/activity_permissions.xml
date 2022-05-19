@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ProfileActivity">
+
+
+    <LinearLayout
+        android:id="@+id/top_rect"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/top_rctn_icn"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <TextView
+        android:id="@+id/Permissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:fontFamily="@font/seg_smb"
+        android:text="@string/profile_permissions"
+        android:textColor="#F5F0EB"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+
+
+    <ImageButton
+        android:id="@+id/bck_arw_cin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bck_arw"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050" />
+
+    <LinearLayout
+
+        android:id="@+id/bck_arw_trans"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0425" />
+
+    <ImageView
+        android:id="@+id/PermissionsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/permissions_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/Permissions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHorizontal_bias="0.87"/>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/Menu"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="14dp"-->
+<!--        android:background="@android:color/transparent"-->
+<!--        android:contextClickable="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.932"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.050"-->
+<!--        app:srcCompat="@drawable/menu_slider_light" />-->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/signUpWithLinLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/top_rect"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintHorizontal_bias="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+
+            >
+
+            <TextView
+                android:id="@+id/LocationServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_bld"
+                android:text="@string/profile_permissions_LocationServices"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:id="@+id/seperatingline"
+                android:layout_width="315dp"
+                android:layout_height="0.5dp"
+                android:background="@drawable/seperatingline_finn"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <Switch
+                android:id="@+id/permissionLocationSharing"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_lig"
+                android:text="@string/profile_permissions_LocationSharing"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:trackTint="@color/colorAccent"
+                android:theme="@style/notificationsSwitch"
+                android:checked="false"
+                />
+
+            <LinearLayout
+                android:id="@+id/locationUpdateFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permissions_updateLocation"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/seg_lig"
+                    android:textSize="13sp"
+                    />
+                <com.bug_apk.locoguard.CustomEditText
+                    android:id="@+id/locationUpdateFrequencyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="s"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/seg_lig"
+                    android:textSize="13sp"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/permissions_seconds"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/seg_lig"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/ContactsServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_bld"
+                android:text="@string/profile_permissions_Contacts"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/seperatingline2"
+                android:layout_width="315dp"
+                android:layout_height="0.5dp"
+                android:background="@drawable/seperatingline_finn"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <Switch
+                android:id="@+id/permissionContactsSharing"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_lig"
+                android:text="@string/profile_permissions_ContactsSharing"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:theme="@style/notificationsSwitch"
+                android:trackTint="@color/colorAccent"
+                />
+
+            <TextView
+                android:id="@+id/SMSServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_bld"
+                android:text="@string/profile_permissions_SMSServices"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                />
+
+            <ImageView
+                android:id="@+id/seperatingline3"
+                android:layout_width="315dp"
+                android:layout_height="0.5dp"
+                android:background="@drawable/seperatingline_finn"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"/>
+
+
+
+            <Switch
+                android:id="@+id/permissionSMS"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seg_lig"
+                android:text="@string/profile_permissions_SMS"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:theme="@style/notificationsSwitch"
+                android:trackTint="@color/colorAccent"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/signUpWithLinLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageView
+            android:id="@+id/hme_icn"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/home_dark" />
+
+
+        <ImageView
+            android:id="@+id/grd_icn"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/guard_dark" />
+
+        <ImageView
+            android:id="@+id/sos"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/sos_dark" />
+
+        <ImageView
+            android:id="@+id/cntcts_icn"
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:paddingVertical="10dp"
+            app:srcCompat="@drawable/contacts_icon_finn" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noInternetAlert"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/segoe"
+        android:gravity="center"
+        android:text="@string/noInternet_pleaseCheckInternet"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="82dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids=""
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="46dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids=""
+        tools:layout_editor_absoluteX="411dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

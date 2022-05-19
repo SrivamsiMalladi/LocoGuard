@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "967926089852",
+    "firebase_url": "https://locoguard-bug-apk.firebaseio.com",
+    "project_id": "locoguard-bug-apk",
+    "storage_bucket": "locoguard-bug-apk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967926089852:android:d1b25a0547f618034921f9",
+        "android_client_info": {
+          "package_name": "com.bug_apk.locoguard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "967926089852-1kg7r3vajkvth9vkdiuqhe16tmt7eb29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bug_apk.locoguard",
+            "certificate_hash": "cacf516f91083d127e30ee05aa444a9ce6764c3e"
+          }
+        },
+        {
+          "client_id": "967926089852-h8ogc8rsk3r8anblcu3a56cc5crg9knr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLjH26K7w1ilQgyqFcPBhOyl4iEjPSp1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "967926089852-h8ogc8rsk3r8anblcu3a56cc5crg9knr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
